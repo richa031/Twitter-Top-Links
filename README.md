@@ -78,9 +78,5 @@ And we're done! Time to start the web server and see if our website is working!
 
 ```python3 manage.py runserver```
 
-* You should see something like [this.](https://www.dropbox.com/s/ce796i9so61ennr/Screenshot%20from%202020-09-26%2001-35-33.png?dl=0)
-![Example Twitter Top Tweets WebApp](https://www.dl.dropboxusercontent.com/s/ce796i9so61ennr/Screenshot%20from%202020-09-26%2001-35-33.png?dl=0)
-
-***
 The sit is deployed on pythonanywhere, [check out!](http://killgear.pythonanywhere.com)
 ***
