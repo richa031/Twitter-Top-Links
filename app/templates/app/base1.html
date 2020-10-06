@@ -1,0 +1,73 @@
+{% load static %}
+<html>
+    <head>
+        <title>Twitter Top Links App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+    <body class="limitter">
+        <div class="container_new">
+            <!----------------------------------------------->
+
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- Brand -->
+                <img class="navbar-brand" src="{% static 'images/logo.png' %}">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href={% url 'top_tweets_list' %}>Home</a>
+                  </li>
+                  {% if  request.session.user_id %}
+                  <li class="nav-item">
+                    <a class="nav-link" href={% url 'user_tweets_list' %}>Tweets</a>
+                  </li>
+                  {% else %}
+                  <div data-tooltip= "Please Sign In !!">
+                    <a  class="item">
+                      Tweets
+                    </a>
+                  </div>
+                {% endif %}
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                
+                    {% if request.session.user_id %}
+                    <a href = {% url 'sign_out' %} class="btn btn-outline-light my-2 my-sm-0 right-toggler" style="align-items: right;">
+                        Log out
+                    </a>
+                    {% else %}
+                        <a href = {% url 'auth' %} class="ui item">
+                        <i class="twitter icon"></i>
+                            Login with Twitter
+                        </a>
+                  {% endif %}
+                
+                </form>
+            </nav>
+            
+            <!----------------------------------------------->
+        
+      </div>
+      <br/>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+        </script>
+        <!-- <script src="semantic/dist/semantic.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
