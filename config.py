@@ -1,9 +1,7 @@
-# Add / update relevant fields
-# rename this file to config.py
 
-CONSUMER_KEY=''  # Twitter Application consumer key
+CONSUMER_KEY='ZgWPYf5kYhDPVQL5W1O73NknR'  # Twitter Application consumer key
 
-CONSUMER_SECRET=''  # Twitter Application consumer secret
+CONSUMER_SECRET='wJUaePAQvr7arezQwPjPW02oreKa2Iw7yb3tYqQ9ybQoR45WIT'  # Twitter Application consumer secret
 
 TWEETS_SINCE_DAYS=100  # Retrieve tweets from last X days
 
