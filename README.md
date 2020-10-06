@@ -80,4 +80,7 @@ And we're done! Time to start the web server and see if our website is working!
 ```python3 manage.py runserver```
 ![Screenshot (38)](https://user-images.githubusercontent.com/32764563/95241904-13e09280-082c-11eb-9beb-9559a9afc116.png)
 
+![Screenshot (40)](https://user-images.githubusercontent.com/32764563/95241999-3a9ec900-082c-11eb-80b2-86346a4c34e8.png)
+
+
 ***
