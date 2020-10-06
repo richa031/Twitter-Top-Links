@@ -3,12 +3,13 @@
 Twitter Top Links is a Django App for displaying top domains shared by authenticated users.
 
 * The app will let the user login with Twitter.
-* Once authenticated, the app pulls only the tweet's that contain URLs, from user's timeline.
+* Once authenticated, the app pulls just the tweet's that contain URLs from a users stream
+(friends + users post) for the past 7 days.
 * Persist the tweets in the database
 * Once stored, the application then computes and display
-    * Full text of user's tweets. 
-    * List of users who have shared the most links.
-    * List of Top Domains that have been shared so far.
+    * a. Actual Tweets containing links
+    * b. Which user has shared the most links
+    * c. List of Top Domains that have been shared so far
  
 ## Installation
 * Follow these to install and set-up development server locally.
