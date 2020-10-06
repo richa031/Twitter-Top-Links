@@ -78,6 +78,6 @@ python3 manage.py createsuperuser
 And we're done! Time to start the web server and see if our website is working!
 
 ```python3 manage.py runserver```
+![Screenshot (38)](https://user-images.githubusercontent.com/32764563/95241904-13e09280-082c-11eb-9beb-9559a9afc116.png)
 
-The sit is deployed on pythonanywhere, [check out!](http://killgear.pythonanywhere.com)
 ***
